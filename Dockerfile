@@ -7,9 +7,10 @@ RUN apt-get update \
 
 RUN ["wget", "https://git.netsurf-browser.org/netsurf.git/plain/docs/env.sh"]
 COPY setup.sh setup.sh
-ENV TZ=Europe/Kiev
+ENV TZ=America/Santiago
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-# RUN bash -c "./setup.sh"
+RUN bash -c "./setup.sh"
+ENTRYPOINT /root/dev-netsurf/workspace/netsurf/nsfb
 # RUN unset HOST \
 #     && . ./env.sh \
 #     && ns-package-install \

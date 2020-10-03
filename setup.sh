@@ -15,5 +15,4 @@ unset HOST \
     && cd ~/dev-netsurf/workspace \
     && source env.sh \
     && cd netsurf \
-    && make TARGET=framebuffer \
-    && ./nsfbmake
+    && make -j`nproc --all` TARGET=framebuffer
