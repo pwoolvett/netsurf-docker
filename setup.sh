@@ -2,9 +2,6 @@
 
 set -e
 
-ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
-    && echo $TZ > /etc/timezone
-
 unset HOST \
     && . ./env.sh \
     || yes | ns-package-install \
@@ -15,4 +12,4 @@ unset HOST \
     && cd ~/dev-netsurf/workspace \
     && source env.sh \
     && cd netsurf \
-    && make -j`nproc --all` TARGET=framebuffer
+    && make TARGET=framebuffer
