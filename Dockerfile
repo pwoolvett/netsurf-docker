@@ -17,15 +17,5 @@ RUN bash -c "./setup.sh"
 
 WORKDIR /root/dev-netsurf/workspace/netsurf/
 
-ENTRYPOINT ./nsfb
-# RUN unset HOST \
-#     && . ./env.sh \
-#     && ns-package-install \
-#     && ns-clone \
-#     && ns-pull-install \
-#     && rm env.sh \
-#     && cd ~/dev-netsurf/workspace \
-#     && source env.sh \
-#     && cd netsurf \
-#     && make TARGET=framebuffer \
-#     && ./nsfbmake
+ENTRYPOINT ["/root/dev-netsurf/workspace/netsurf/nsfb"]
+CMD ["google.com"]
