@@ -46,14 +46,17 @@ class Commands:
         return r1 + r2
 
 
-def cli(cmdname):
+def cli():
     try:
+        cmdname = sys.argv[1]
         func = getattr(Commands, cmdname)
-    except AttributeError:
-        print(f"Available Commands: {dir(Commands)}")
+    except IndexError:
+        return Commands.install()
+    except (AttributeError):
+        print(f"Available Commands: build, install, bash, run")
         return 1
     return func()
 
 
 if __name__ == "__main__":
-    cli(sys.argv[1])
+    cli()
