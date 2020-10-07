@@ -8,8 +8,6 @@ import subprocess
 import sys
 
 
-DEFAULT_ARGS = "-w 1920 -h 1080 google.com"
-
 
 class Commands:
     def call(cmd, **kw):
@@ -28,12 +26,11 @@ class Commands:
         return Commands.call(cmd)
 
     def install():
-        Commands.build()
         loc = "/usr/local/bin/netsurf"
         script = _(
             """\
             #!/usr/bin/env bash
-            docker run --rm -it --privileged pwoolvett/netsurf-fb $@
+            docker run --rm -it --privileged pwoolvett/netsurf-fb:1.0.0 $@ 
             """
         )
 
