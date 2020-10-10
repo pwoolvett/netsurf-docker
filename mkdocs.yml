@@ -1,7 +1,6 @@
 site_name: Independent and Identically distributed Brainfarts
 theme:
   name: 'material'
-  custom_dir: overrides
   palette:
     scheme: preference
     primary: 'white'
@@ -37,36 +36,17 @@ markdown_extensions:
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
-  # - javascripts/config.js
-  - js/termynal.js
-  - js/customTermynals.js
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css
-  - css/termynal.css
-  - css/align.css
 nav:
   - Home: index.md
-  - Gists:
-      - gists/blackini.md
-      - gists/empty-folders.md
-      - gists/github-pages-website.md
-      - gists/gstlaunch-bins.md
-  - Tutorials:
-      - tutos/python-setup.md
 
 extra:
   social:
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/pablowoolvett/
     - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/u/pwoolvett
+      link: https://hub.docker.com/u/pwoolvett/netsurf-docker
     - icon: fontawesome/brands/github
-      link: https://www.github.com/pwoolvett
-    - icon: fontawesome/brands/stack-exchange
-      link: https://stackexchange.com/users/6923219/pwoolvett
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/user/pwoolvett
-    - icon: material/forum
-      link: https://forums.developer.nvidia.com/u/pwoolvett
+      link: https://github.com/pwoolvett/netsurf-docker
+
       
-repo_url: https://github.com/pwoolvett/pwoolvett.github.io
+repo_url: https://github.com/pwoolvett/netsurf-docker
