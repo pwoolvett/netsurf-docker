@@ -17,5 +17,5 @@ RUN bash -c "./setup.sh"
 
 WORKDIR /root/dev-netsurf/workspace/netsurf/
 
-ENTRYPOINT ["/root/dev-netsurf/workspace/netsurf/nsfb"]
-CMD ["google.com"]
+ENTRYPOINT ["/root/dev-netsurf/workspace/netsurf/nsfb", "-f", "sdl"]
+CMD ["-w", "400", "-h", "400", "google.com"]
